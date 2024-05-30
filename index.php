@@ -15,10 +15,11 @@
             <th colspan="4">Users Table</th>
         </tr>
         <tr>
-            <th>ID</th> 
+            <th>ID</th>
             <th>NAME</th>
             <th>EMAIL</th>
             <th>PASSWORD</th>
+            <th>ACTIONS</th>
         </tr>
 
         <?php
@@ -39,9 +40,9 @@
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td><?php echo $row['password']; ?></td>
+                <td><a href="DeleteUser.php?id=<?php echo $row['id'] ?>">Delete</a> | <a
+                        href="Update.php?id=<?php echo $row['id'] ?>">Update</a></td>
             </tr>
-
-
         <?php } ?>
 
     </table>
